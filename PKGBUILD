@@ -16,5 +16,5 @@ sha256sums=('SKIP')
 
 package() {
     cd "$pkgname-main"
-    sudo install -Dm644 -t "/usr/share/nautilus-python/extensions" nautilus-open-in-ptyxis.py
+    install -Dm644 -t "$pkgdir/usr/share/nautilus-python/extensions" nautilus-open-in-ptyxis.py
 }
