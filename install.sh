@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-EXT_PATH=nautilus-open-in-blackbox.py
+EXT_PATH=nautilus-open-in-ptyxis.py
 
 restart_nautilus() {
     read -p "Restart Nautilus(Files)? [Y/n]" ans
@@ -8,19 +8,6 @@ restart_nautilus() {
     if [[ $ans == 'y' || $ans == 'Y' || $ans == '' ]]; then
         nautilus -q
     fi
-}
-
-install_user() {
-    path=$EXT_PATH
-    target=~/.local/share/nautilus-python/extensions/
-
-    if [[ ! -d $target ]]; then
-        mkdir -v -p $target
-    fi
-
-    cp -v $path $target
-
-    restart_nautilus
 }
 
 install_sudo() {
@@ -36,18 +23,10 @@ install_sudo() {
     restart_nautilus
 }
 
-if [[ $(id -u) == 0 ]]; then
-    read -p "This is run with sudo, install system-wide?[Y/n]" ans
-    if [[ $ans == 'y' || $ans == 'Y' || $ans == '' ]]; then
-        install_sudo
-    else
-        echo -n "Skip install..."
-    fi
-else
-    read -p "Install OpenInBlackBox?[Y/n]" ans
-    if [[ $ans == 'y' || $ans == 'Y' || $ans == '' ]]; then
-        install_user
-    else
-        echo -n "Skip install..."
-    fi
+if [[ $(id -u) =1 0 ]]; then
+    echo "This script must be run as root. Please use sudo."
+    echo "Tip: sudo !!"
+    exit 1
 fi
+
+install_sudo
