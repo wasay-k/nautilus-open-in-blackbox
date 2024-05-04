@@ -1,12 +1,6 @@
-# OpenInBlackBox
+# OpenInPtyxis
 
-<p>Simple script to open my favorite terminal <a href="https://gitlab.gnome.org/raggesilver/blackbox">Black Box</a> from Nautilus (Gnome Files) Menu</p>
-
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/phucnoob/OpenInBlackBox/main/preview.png" />
-</p>
-
+<p>Simple script to open my favorite terminal <a href="https://gitlab.gnome.org/chergert/ptyxis">Ptyxis</a> from Nautilus (Gnome Files) Menu</p>
 
 ## Dependency
 `nautilus-python`( `python-nautilus` on Debian/Ubuntu based)
@@ -24,7 +18,7 @@ sudo dnf install nautilus-python
 ### Arch Linux
 Install from AUR
 ```
-yay -S nautilus-open-in-blackbox
+yay -S nautilus-open-in-ptyxis
 ```
 Restart Nautilus
 ```
@@ -35,11 +29,7 @@ nautilus -q
 
 Clone this repository and use the install script.
 ```
-git clone https://github.com/ppvan/nautilus-open-in-blackbox.git
-cd nautilus-open-in-blackbox
-./install.sh
-```
-or install system-wide with sudo
-```
+git clone https://github.com/GustavoWidman/nautilus-open-in-ptyxis.git
+cd nautilus-open-in-ptyxis
 sudo ./install.sh
 ```
