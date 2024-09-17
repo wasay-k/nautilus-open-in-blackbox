@@ -16,18 +16,11 @@ sudo dnf install nautilus-python
 
 ## Installation
 
-### Arch Linux
-Install from AUR
-```
-yay -S nautilus-open-in-ptyxis
 ```
 Restart Nautilus
 ```
 nautilus -q
 ```
-
-### Other Disto
-
 Clone this repository and use the install script.
 ```
 git clone https://github.com/wasay-k/nautilus-open-in-blackbox.git
