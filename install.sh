@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-EXT_PATH=nautilus-open-in-ptyxis.py
+EXT_PATH=nautilus-open-in-blackbox.py
 
 restart_nautilus() {
     read -p "Restart Nautilus(Files)? [Y/n]" ans
@@ -23,10 +23,10 @@ install_sudo() {
     restart_nautilus
 }
 
-if [[ $(id -u) =1 0 ]]; then
+if [[ $(id -u) -eq 0 ]]; then
+    install_sudo
+else
     echo "This script must be run as root. Please use sudo."
-    echo "Tip: sudo !!"
+    echo "Tip: sudo!!"
     exit 1
 fi
-
-install_sudo
