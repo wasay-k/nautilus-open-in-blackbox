@@ -15,8 +15,6 @@ sudo dnf install nautilus-python
 ```
 
 ## Installation
-
-```
 Restart Nautilus
 ```
 nautilus -q
